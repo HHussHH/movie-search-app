@@ -3,7 +3,7 @@ import { useMovieStore } from "./MovieStore";
 import { ref } from "vue";
 import axios from "axios";
 const url =
-  "http://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=";
+  "https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=";
 const api_key = "36bb301d-fadf-4371-b97e-ede492f71f8d";
 // export const useSearchStore = defineStore("searchStore", {
 //   state: () => ({
