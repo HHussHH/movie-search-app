@@ -1,5 +1,6 @@
 <script setup>
 import Movie from "./components/Movie.vue";
+import Search from "./components/Search.vue";
 import { useMovieStore } from "./stores/MovieStore";
 
 const movieStore = useMovieStore();
@@ -11,14 +12,7 @@ const setTab = (id) => {
 <template>
   <main>
     <header class="header">
-      <div
-        style="
-          width: 50px;
-          height: 50px;
-          background-color: red;
-          border-radius: 20px;
-        "
-      ></div>
+      <div class="logo"></div>
       <h2>My Favorite Movies</h2>
     </header>
     <div class="tabs">
@@ -51,11 +45,19 @@ const setTab = (id) => {
         :movie="movie"
       />
     </div>
-    <div class="search" v-else>Search</div>
+    <div class="search" v-else>
+      <Search />
+    </div>
   </main>
 </template>
 
 <style lang="css">
+.logo {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 20px;
+}
 .header {
   display: flex;
   justify-content: center;
